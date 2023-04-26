@@ -23,30 +23,22 @@ export default function Login() {
     }
 
   return (
-    <> <div class="background"></div>
-    <form onSubmit={handleSubmit}>
+    <> <div className="background"></div>
+    <form onSubmit={handleSubmit} className='form-container'>
       <h3>{toggle ? 'Login Here' : 'Sign Up'}</h3>
 
-      <label htmlFor="email">Email</label>
-      <input type="email" placeholder="Email" id="email" ref={emailRef} />
+      <label htmlFor="email">Username</label>
+      <input type="email" placeholder="Username" id="email" ref={emailRef} className="form-control" />
 
       <label htmlFor="password">Password</label>
-      <input type="password" placeholder="Password" id="password" ref={passwordRef} />
+      <input type="password" placeholder="Password" id="password" ref={passwordRef} className="form-control" />
 
-      <button type="submit" onClick={handleSubmit}>{toggle ? 'Log In' : 'Sign Up'}</button>
+      <button type="submit" onClick={handleSubmit} className='submitButton'>{toggle ? 'Log In' : 'Sign Up'}</button>
       <div className="registerText">
-        {toggle ? "Don't have an account? " : 'Already have an account? '}
+        {/* {toggle ? "Don't have an account? " : 'Already have an account? '} */}
         <span onClick={() => setToggle(!toggle)}>
           {toggle ? 'Register' : 'Log In'}
         </span>
-      </div>
-      <div class="social">
-        <div class="go">
-          <i class="fab fa-google"></i> Google
-        </div>
-        <div class="fb">
-          <i class="fab fa-facebook"></i> Facebook
-        </div>
       </div>
     </form></>
   )

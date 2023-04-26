@@ -1,0 +1,113 @@
+.searchContainer{
+    width: 90%;
+    height: 90%;
+    display: flex;align-self: flex-start;
+    margin-top:.5rem;
+    flex-direction: column;
+    border-radius:10px;
+    /* background-color: #fff; */
+}
+.searchBox{
+    height: 20%;
+    padding-top: 2rem;
+    margin-bottom: 1rem;
+    width: 50%;
+    background-color: #fff;
+    border-radius:10px
+    /* background-color: aqua; */
+}
+
+.newVisit{
+    height: fit-content;
+    max-height: 80%;
+    margin-bottom: 1rem;
+    width: 100%;
+    overflow: scroll;
+    background-color: #fff;
+    /* border-radius:10px */
+    /* background-color: green; */
+}
+
+.previousVisits{
+    /* height: 50%; */
+    /* background-color:yellow */
+}
+
+.search-box input{
+    height: 45px;
+    width: 50%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+  }
+
+ .search-box span{
+    height: 3rem;
+   width: 8rem  ;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   margin-right: 1rem;
+   padding: 0.5rem;
+   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+ } 
+
+ /* table formatting */
+ table {
+    border-collapse: collapse;
+    width: fit-content;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+    background-color: #ddd;
+  }
+  
+  /* add borders to cells */
+  td, th {
+    border: 1px solid black;
+  }
+  
+  /* style the table header row */
+  thead {
+    background-color: #333;
+    color: white;
+  }
+  
+  /* style the table footer row */
+  tfoot {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  td {
+    word-wrap: break-word; /* Break long words to new lines */
+    max-width: 200px; /* Set the maximum width of td */
+    overflow: auto; /* Hide overflow content */
+    /* text-overflow: ellipsis; Add ellipsis for overflow text */
+    white-space: nowrap; /* Prevent wrapping */
+  }
+  

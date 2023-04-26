@@ -1,6 +1,7 @@
 const path = require('path');
+const fs = require('fs');
 
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, ipcMain } = require('electron');
 const isDev = require('electron-is-dev');
 
 function createWindow() {
@@ -11,8 +12,36 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: true,
     },
+    webPreferences: {
+      preload: path.join(__dirname, 'preload.js')
+    }
   });
 
+  ipcMain.handle('set-title', (event, formData) => {
+    const filePath = path.join(__dirname, "data.json");
+  let existingData = [];
+  try {
+    existingData = JSON.parse(fs.readFileSync(filePath));
+  } catch (error) {
+    console.log("No existing data found in file");
+  }
+  existingData.push(formData);
+  fs.writeFileSync(filePath, JSON.stringify(existingData, null, 2));
+  console.log("Data saved to file");
+  return true;
+  })
+
+  //handling get patient data
+  ipcMain.handle('get-patients',(e)=>{
+    const filePath = path.join(__dirname, "data.json");
+  let existingData = [];
+  try {
+    existingData = JSON.parse(fs.readFileSync(filePath));
+  } catch (error) {
+    console.log("No existing data found in file");
+  }
+  return existingData;
+  })
   // and load the index.html of the app.
   // win.loadFile("index.html");
   win.loadURL(
