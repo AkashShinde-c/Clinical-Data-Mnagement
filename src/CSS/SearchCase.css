@@ -1,0 +1,126 @@
+.searchContainer{
+    width: 90%;
+    height: 100%;
+    display: flex;align-self: flex-start;
+    margin-top:.5rem;
+    flex-direction: column;
+    border-radius:10px;
+    /* background-color: #fff; */
+}
+.searchBox {
+  height: 15%;
+  padding: 2rem;
+  display: flex;
+  margin-bottom: 1rem;
+  align-items: center;
+  margin-top: .5rem;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px
+  /* background-color: aqua; */;
+}
+
+.newVisit{
+    height: fit-content;
+    max-height: 30rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    overflow: auto;
+    background-color: #fff;
+    /* border-radius:10px */
+    /* background-color: green; */
+}
+
+.previousVisits{
+    /* height: 50%; */
+    /* background-color:yellow */
+    overflow: auto;
+}
+
+.search-box input{
+    height: 45px;
+    width: 50%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+  }
+
+ .search-box span{
+    height: 3rem;
+   width: 8rem  ;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   margin-right: 1rem;
+   padding: 0.5rem;
+   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+ } 
+
+ /* table formatting */
+ table {
+  border-collapse: collapse;
+  width: fit-content;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+  font-size: 14px; /* Add this line to reduce the font size */
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+/* Add some styling to make the table look better */
+thead {
+  background-color: #333;
+  color: white;
+  font-weight: bold;
+}
+
+tfoot {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+td,
+th {
+  border: 1px solid black;
+  white-space: nowrap;
+}
+
+.backButton {
+  position: absolute;
+  top: 3.56rem;
+  height: 1.7rem;
+  left: 19.5rem;
+  background-color: green;
+  border-radius: 5px;
+  color: #fff;
+  width: 4rem;
+  cursor: pointer;
+  font-weight: 800;
+  border: none;
+}

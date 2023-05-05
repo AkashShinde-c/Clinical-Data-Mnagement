@@ -1,0 +1,113 @@
+.newVisitContainer {
+  height: 95%;
+  overflow-y: hidden;
+  background-color: #fff;
+
+  border-radius: 10px;
+}
+
+.table {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  border-bottom: 0;
+  align-items: center;
+  height: 2rem;
+  color: #fff;
+  flex-direction: row;
+  background-color: green;
+}
+
+.addVisit {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  align-items: center;
+  padding: 2rem;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.details {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.feesBox {
+  display: flex;
+  flex-wrap: wrap;
+  height: 5rem;
+  width: 25rem;
+  align-items: flex-start;
+  position: relative;
+}
+
+.fees-box {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.feeDetails {
+  font-weight: bold;
+}
+table {
+  width: 100%;
+}
+tbody {
+  height: 3rem;
+}
+.tableContainer {
+  position: relative;
+  top: -4rem;
+  padding: 2rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  max-height: 17rem;
+  scroll-behavior: smooth;
+  overflow: auto;
+}
+
+.filter {
+  display: flex;
+  justify-content: flex-end;
+
+  /* background-color: black; */
+}
+
+.filter input[type="date"] {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.filter span:first-child {
+  font-weight: bold;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.625rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: sticky;
+  top : 0rem;
+  background-color: white;
+}
+
+input[type="date"] {
+  padding: 5px;
+  border: none;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+
+ 
