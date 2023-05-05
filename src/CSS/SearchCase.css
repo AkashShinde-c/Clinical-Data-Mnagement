@@ -1,28 +1,31 @@
 .searchContainer{
     width: 90%;
-    height: 90%;
+    height: 100%;
     display: flex;align-self: flex-start;
     margin-top:.5rem;
     flex-direction: column;
     border-radius:10px;
     /* background-color: #fff; */
 }
-.searchBox{
-    height: 20%;
-    padding-top: 2rem;
-    margin-bottom: 1rem;
-    width: 50%;
-    background-color: #fff;
-    border-radius:10px
-    /* background-color: aqua; */
+.searchBox {
+  height: 15%;
+  padding: 2rem;
+  display: flex;
+  margin-bottom: 1rem;
+  align-items: center;
+  margin-top: .5rem;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px
+  /* background-color: aqua; */;
 }
 
 .newVisit{
     height: fit-content;
-    max-height: 80%;
+    max-height: 30rem;
     margin-bottom: 1rem;
     width: 100%;
-    overflow: scroll;
+    overflow: auto;
     background-color: #fff;
     /* border-radius:10px */
     /* background-color: green; */
@@ -31,6 +34,7 @@
 .previousVisits{
     /* height: 50%; */
     /* background-color:yellow */
+    overflow: auto;
 }
 
 .search-box input{
@@ -63,51 +67,60 @@
 
  /* table formatting */
  table {
-    border-collapse: collapse;
-    width: fit-content;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+  border-collapse: collapse;
+  width: fit-content;
+  font-family: Arial, Helvetica, sans-serif;
   
-  th, td {
-    text-align: left;
-    padding: 8px;
-  }
-  
-  th {
-    background-color: #4CAF50;
-    color: white;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-  
-  tr:hover {
-    background-color: #ddd;
-  }
-  
-  /* add borders to cells */
-  td, th {
-    border: 1px solid black;
-  }
-  
-  /* style the table header row */
-  thead {
-    background-color: #333;
-    color: white;
-  }
-  
-  /* style the table footer row */
-  tfoot {
-    background-color: #f2f2f2;
-    font-weight: bold;
-  }
-  
-  td {
-    word-wrap: break-word; /* Break long words to new lines */
-    max-width: 200px; /* Set the maximum width of td */
-    overflow: auto; /* Hide overflow content */
-    /* text-overflow: ellipsis; Add ellipsis for overflow text */
-    white-space: nowrap; /* Prevent wrapping */
-  }
-  
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+  font-size: 14px; /* Add this line to reduce the font size */
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+/* Add some styling to make the table look better */
+thead {
+  background-color: #333;
+  color: white;
+  font-weight: bold;
+}
+
+tfoot {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+td,
+th {
+  border: 1px solid black;
+  white-space: nowrap;
+}
+
+.backButton {
+  position: absolute;
+  top: 3.56rem;
+  height: 1.7rem;
+  left: 19.5rem;
+  background-color: green;
+  border-radius: 5px;
+  color: #fff;
+  width: 4rem;
+  cursor: pointer;
+  font-weight: 800;
+  border: none;
+}

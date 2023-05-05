@@ -7,11 +7,17 @@ export default function CasePaper() {
   const phoneNumberRef = useRef();
   const addressRef = useRef();
   const dobRef = useRef();
+  const ageRef = useRef();
   const illnessRef = useRef();
   const genderRef = useRef();
 
   function handleSubmit(event) {
     event.preventDefault();
+    if( phoneNumberRef.current.value>9999999999||phoneNumberRef.current.value<1000000000)
+    {
+      window.alert("Invalid Phone number...!")
+      return
+    }
     const registrationNumber = localStorage.getItem("registrationNumber") || 1000;
     const formData = {
       registrationNumber: registrationNumber,
@@ -19,6 +25,7 @@ export default function CasePaper() {
       email: emailRef.current.value,
       phoneNumber: phoneNumberRef.current.value,
       address: addressRef.current.value,
+      age:ageRef.current.value,
       dob: dobRef.current.value,
       illness: illnessRef.current.value,
       gender: genderRef.current.value,
@@ -49,7 +56,7 @@ export default function CasePaper() {
               </div>
               <div className="input-box">
                 <span className="details">Phone Number</span>
-                <input type="text" placeholder="Enter number" ref={phoneNumberRef} required />
+                <input type="number" placeholder="Enter number" ref={phoneNumberRef} required />
               </div>
               <div className="input-box">
                 <span className="details">Address</span>
@@ -58,6 +65,10 @@ export default function CasePaper() {
               <div className="input-box">
                 <span className="details">Date of Birth</span>
                 <input type="date" ref={dobRef} required />
+              </div>
+              <div className="input-box">
+                <span className="details">Age</span>
+                <input type="text" ref={ageRef} required />
               </div>
               <div className="input-box">
                 <span className="details">Illness</span>

@@ -1,0 +1,44 @@
+table{
+    overflow: auto;
+    height: 5rem;
+}
+
+.allVisitContainer{
+    height:80%;
+    width: 80%;
+    background-color: #fff;
+    overflow: auto;
+    padding:2rem
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 0.3rem;
+  }
+  
+  input[type="date"] {
+    padding: 5px;
+    border: none;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    margin: 0 10px;
+  }
+  
+  .btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

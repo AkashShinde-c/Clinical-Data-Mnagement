@@ -64,5 +64,166 @@
     "illness": "Cough",
     "gender": "male",
     "visits": []
+  },
+  {
+    "registrationNumber": "1006",
+    "fullName": "Avadhut Subhash Yadav",
+    "email": "avadut@gmail.com",
+    "phoneNumber": "65467498413",
+    "address": "hagsd ahwiud ajghsuidtgw-2331",
+    "dob": "2023-04-19",
+    "illness": "pain in abdomen",
+    "gender": "male",
+    "visits": []
+  },
+  {
+    "registrationNumber": "1007",
+    "fullName": "Dyansh",
+    "email": "dyanesh@gmail.com",
+    "phoneNumber": "8960596890",
+    "address": "at sonari pof -32213",
+    "dob": "2023-04-22",
+    "illness": "Mild headache",
+    "gender": "male",
+    "visits": []
+  },
+  {
+    "registrationNumber": "1008",
+    "fullName": "Sharv Dalal",
+    "email": "dala@street.com",
+    "phoneNumber": "458655495",
+    "address": "hjfgiwuehrjk",
+    "dob": "2023-04-08",
+    "illness": "Pain in chest",
+    "gender": "male",
+    "visits": []
+  },
+  {
+    "registrationNumber": "1009",
+    "fullName": "Sakharam",
+    "email": "sakha@jjsfdo.com",
+    "phoneNumber": "4582154658",
+    "address": "awdadfawf",
+    "age": "52",
+    "dob": "2023-04-28",
+    "illness": "Not existent",
+    "gender": "male",
+    "visits": [
+      {
+        "regNo": "1009",
+        "date": "2023-04-30",
+        "doctor": "NAY",
+        "diagnosis": "Fever",
+        "medication": "Paracetamol",
+        "examination": "Bacterial Infection",
+        "consulting": "100",
+        "injection": "100",
+        "iv": "0"
+      },
+      {
+        "regNo": "1009",
+        "date": "2023-04-30",
+        "doctor": "NAY",
+        "diagnosis": "Fever",
+        "medication": "Paracetamol",
+        "examination": "Bacterial Infection",
+        "consulting": "100",
+        "injection": "100",
+        "iv": "0"
+      },
+      {
+        "regNo": "1009",
+        "date": "2023-04-30",
+        "doctor": "",
+        "diagnosis": "",
+        "medication": "",
+        "examination": "",
+        "consulting": "",
+        "injection": "",
+        "iv": ""
+      },
+      {
+        "regNo": "1009",
+        "date": "2023-04-30",
+        "doctor": "Aditya",
+        "diagnosis": "Cold",
+        "medication": "Azithromicin",
+        "examination": "bacterial infection ",
+        "consulting": "100",
+        "injection": "100",
+        "iv": "0"
+      },
+      {
+        "regNo": "1009",
+        "date": "2023-05-02",
+        "doctor": "Akash",
+        "diagnosis": "Fever",
+        "medication": "Paracetamol",
+        "examination": "Checked fever",
+        "consulting": "100",
+        "injection": "100",
+        "iv": "100"
+      }
+    ]
+  },
+  {
+    "registrationNumber": 2,
+    "fullName": "SUNIL NA GITE",
+    "email": "",
+    "phoneNumber": "",
+    "address": "GKND",
+    "age": 34,
+    "dob": "",
+    "illness": " ",
+    "gender": "Male",
+    "visits": []
+  },
+  {
+    "registrationNumber": 4,
+    "fullName": "VANDANA SANTOSH TIRMANWAR",
+    "email": "",
+    "phoneNumber": "",
+    "address": "YELMA",
+    "age": 35,
+    "dob": "",
+    "illness": " ",
+    "gender": "Female",
+    "visits": []
+  },
+  {
+    "registrationNumber": 194,
+    "fullName": "LAXMI KISAN SUDDEWAD",
+    "email": "",
+    "phoneNumber": "",
+    "address": "BP",
+    "age": 30,
+    "dob": "",
+    "illness": " ",
+    "gender": "Female",
+    "visits": []
+  },
+  {
+    "registrationNumber": 208,
+    "fullName": "SULTANA NA KHANAM",
+    "email": "",
+    "phoneNumber": "",
+    "address": "BHN",
+    "age": 50,
+    "dob": "",
+    "illness": " ",
+    "gender": "Female",
+    "visits": []
+  },
+  {
+    "registrationNumber": 156,
+    "fullName": "SAGARBAI RAMESH KOLI",
+    "email": "",
+    "phoneNumber": "",
+    "address": "GKND",
+    "age": 20,
+    "dob": "",
+    "illness": " ",
+    "gender": "Female",
+    "visits": []
   }
 ]
