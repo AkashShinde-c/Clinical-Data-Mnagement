@@ -34,6 +34,16 @@ function createWindow() {
     return true;
   });
 
+  function calculateAge(dob) {
+    const today = new Date();
+    const birthDate = new Date(dob);
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+    }
+    return age;
+  }
   //add visit of patient
   ipcMain.handle("add-visit", (e, visitData) => {
     const filePath = path.join(__dirname, "data.json");
@@ -46,6 +56,12 @@ function createWindow() {
     const patientToUpdate = patients.find(
       (patient) => patient.registrationNumber === visitData.regNo
     );
+    let dob = patientToUpdate.dob;
+    let newAge = calculateAge(dob);
+    console.log(patientToUpdate['age'])
+    patientToUpdate['age'] = newAge;
+    console.log(patientToUpdate['age'])
+
     patientToUpdate.visits.push(visitData);
     const updatedData = JSON.stringify(patients);
     fs.writeFileSync(filePath, updatedData);
@@ -77,6 +93,11 @@ function createWindow() {
     return patient.visits;
   });
 
+  //handle pdf generation
+  ipcMain.handle('generate-pdf-report', (e,data)=>{
+    
+  })
+
   //handle get all visit
   ipcMain.handle("get-all-visit", (e) => {
     const filePath = path.join(__dirname, "data.json");
@@ -91,7 +112,8 @@ function createWindow() {
   });
   //handle import xls
   ipcMain.handle("import-csv", (e) => {
-    const filePath = path.join(__dirname, "data.json");let existingData = [];
+    const filePath = path.join(__dirname, "data.json");
+    let existingData = [];
     try {
       existingData = JSON.parse(fs.readFileSync(filePath));
     } catch (error) {
@@ -118,11 +140,15 @@ function createWindow() {
 
         // Convert worksheet to JSON object
         const data = xlsx.utils.sheet_to_json(worksheet);
-         data.map((data) => {
+        data.map((data) => {
           existingData.push({
             registrationNumber: data["REG. NO."],
             fullName:
-              data["FIRST NAME"] +" "+data["MIDDLE NAME"]+" "+ data["LAST NAME"],
+              data["FIRST NAME"] +
+              " " +
+              data["MIDDLE NAME"] +
+              " " +
+              data["LAST NAME"],
             email: "",
             phoneNumber: "",
             address: data.ADDRESS,
@@ -130,15 +156,13 @@ function createWindow() {
             dob: "",
             illness: " ",
             gender: data.SEX,
-            visits: []
+            visits: [],
           });
-        
         });
-         
+
         const jsonString = JSON.stringify(existingData, null, 2);
         fs.writeFileSync(filePath, jsonString);
         // Do something with the JSON data
-        
       });
   });
 
@@ -176,6 +200,26 @@ function createWindow() {
     return true;
   });
 
+  //update patient data
+  ipcMain.handle("update-patient", (e,data) => {
+    console.log(data)
+    const filePath = path.join(__dirname, "data.json");
+    let existingData = [];
+    try {
+      const fileData = fs.readFileSync(filePath, {
+        encoding: "utf8",
+      });
+      existingData = JSON.parse(fileData);
+    } catch (error) {
+      console.log("No existing data found in file");
+    }
+    existingData[data.index] = data.formData;
+
+    const jsonString = JSON.stringify(existingData, null, 2);
+    fs.writeFileSync(filePath, jsonString);
+    return data.index;
+  });
+
   // and load the index.html of the app.
   // win.loadFile("index.html");
   win.loadURL(
@@ -208,3 +252,5 @@ app.on("activate", () => {
     createWindow();
   }
 });
+
+exports.BrowserWindow = BrowserWindow;

@@ -35,7 +35,7 @@
 }
 
 .details {
-  margin-bottom: 10px;
+  
   font-weight: bold;
 }
 
@@ -43,7 +43,7 @@
   display: flex;
   flex-wrap: wrap;
   height: 5rem;
-  width: 25rem;
+  width: 39.5rem;
   align-items: flex-start;
   position: relative;
 }
@@ -54,8 +54,12 @@
   flex-direction: column;
 }
 
+.fees-box input {
+  width: 6.5rem;
+}
+
 .feeDetails {
-  font-weight: bold;
+  font-weight: small;
 }
 table {
   width: 100%;
