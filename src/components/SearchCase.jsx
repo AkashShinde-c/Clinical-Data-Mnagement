@@ -24,7 +24,7 @@ function PatientTable(props) {
       {selectedPatient && (
         <div className="newVisitContainer">
           <button onClick={()=>handleClick()} className="backButton">Go Back</button>
-          <NewVisit patient={selectedPatient} />
+          <NewVisit patient={selectedPatient} pdf = {props.pdf} />
         </div>
       )}
       {showTable &&
@@ -47,8 +47,8 @@ function PatientTable(props) {
         </thead>
         <tbody>
           {props.patients.map((patient, index) => (
-            <tr key={index}>
-              <td onClick={() => handleRegistrationNumberClick(patient)}>
+            <tr key={index} onClick={() => handleRegistrationNumberClick(patient)} style={{cursor:'pointer'}}>
+              <td >
                 {patient.registrationNumber || ""}
               </td>
               <td>{patient.fullName}</td>
@@ -70,7 +70,7 @@ function PatientTable(props) {
     </>
   );
 }
-export default function SearchCase() {
+export default function SearchCase(props) {
   const [patients, setPatients] = useState([]);
   const [showSearch, setShowSearch] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
@@ -120,7 +120,7 @@ export default function SearchCase() {
   </div>)}
        
 
-          <PatientTable patients={filteredPatients} setShowSearch = {setShowSearch} />
+          <PatientTable patients={filteredPatients} setShowSearch = {setShowSearch} pdf = {props.pdf}/>
          
         <div className="previousVisits"></div>
       </div>

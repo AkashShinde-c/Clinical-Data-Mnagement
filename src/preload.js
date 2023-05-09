@@ -8,4 +8,5 @@ contextBridge.exposeInMainWorld('electronAPI', {
   convertToCsv: () => ipcRenderer.invoke('convert-csv'),
   getAllVisit: () => ipcRenderer.invoke('get-all-visit'),
   importCSV: () => ipcRenderer.invoke('import-csv'),
+  updatePatient: (data)=> ipcRenderer.invoke('update-patient',data)
 })

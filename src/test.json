@@ -1,0 +1,13 @@
+{
+    "props": {
+        "registrationNumber": "1004",
+        "fullName": "Akash Arjun Shinde",
+        "email": "shindeakashak47@gmail.com",
+        "phoneNumber": "9373801864",
+        "address": "at sonari, po sonambe, tal. sinnar, dist. nashik - 422103",
+        "dob": "2023-04-03",
+        "illness": "Has pain in chest",
+        "gender": "male",
+        "visits": []
+    }
+}
