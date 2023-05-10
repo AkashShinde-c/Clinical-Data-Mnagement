@@ -6,6 +6,12 @@ import { useHistory } from "react-router-dom";
 import ViewAllVisits from "./ViewAllVisits";
 import UpdateBiodata from "./UpdateBiodata";
 import GeneratePDF from "./GeneratePDF";
+import {BsPersonFillAdd} from 'react-icons/bs'
+import {FaSearchPlus} from 'react-icons/fa'
+import {FaUserEdit} from 'react-icons/fa'
+import {RiLogoutBoxRFill} from 'react-icons/ri'
+import {RiDeleteBin6Fill} from 'react-icons/ri'
+import {AiOutlineFolderView} from 'react-icons/ai'
 
 export default function Dashboard() {
   const navigate = useHistory();
@@ -61,22 +67,34 @@ export default function Dashboard() {
     <>
       <div className="mainDashboard">
         <div className="leftPart">
-          <div className="dashboardButton" onClick={handleNewCase}>
+          <h1><BsPersonFillAdd onClick={handleNewCase} style={{cursor:'pointer'}} className="dashboardButton"/></h1> 
+          <span style={{color:'white', fontSize:'.8rem',marginTop:'-.9rem'}}>Registration</span>
+          {/* <div className="dashboardButton" >
             New Case{" "}
-          </div>
-          <div className="dashboardButton" onClick={handleSearchCase}>
+          </div> */}
+          <h1><FaSearchPlus className="dashboardButton" onClick={handleSearchCase}/></h1>
+          <span style={{color:'white',fontSize:'.8rem',marginTop:'-.9rem'}}>Search</span>
+          {/* <div className="dashboardButton" >
             Search Case
-          </div>
-          <div className="dashboardButton" onClick={handleViewAllVisits}>
+          </div> */}
+          <h1><AiOutlineFolderView onClick={handleViewAllVisits} className="dashboardButton"/></h1>
+          <span style={{color:'white',fontSize:'.8rem',marginTop:'-.9rem'}}>View visits</span>
+          {/* <div className="dashboardButton" >
             View All Visits
-          </div>
-          <div className="dashboardButton" onClick={handleUpdateBiodata}>
+          </div> */}
+          <h1><FaUserEdit className="dashboardButton" onClick={handleUpdateBiodata}/></h1>
+          <span style={{color:'white',fontSize:'.8rem',marginTop:'-.9rem'}}>Edit Patient</span>
+          {/* <div className="dashboardButton" >
           Update Biodata
-          </div>
-          <div className="dashboardButton" onClick={handleShowPDF}>Delete Case</div>
-          <div className="dashboardButton" onClick={handleLogout}>
+          </div> */}
+          <h1><RiDeleteBin6Fill  className="dashboardButton"/></h1>
+          <span style={{color:'white',fontSize:'.8rem',marginTop:'-.9rem'}}>Delete Patient</span>
+          {/* <div className="dashboardButton" onClick={handleShowPDF}>Delete Case</div> */}
+          <h1><RiLogoutBoxRFill className="dashboardButton"  onClick={handleLogout}/></h1>
+          <span style={{color:'white',fontSize:'.8rem',marginTop:'-.9rem'}}>Logout</span>
+          {/* <div className="dashboardButton" >
             Log-Out
-          </div>
+          </div> */}
         </div>
         <div className="rightPart">
           {showCasePaper && <CasePaper></CasePaper>}

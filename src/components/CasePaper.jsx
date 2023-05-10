@@ -64,7 +64,7 @@ export default function CasePaper() {
               </div>
               <div className="input-box">
                 <span className="details">Date of Birth</span>
-                <input type="date" ref={dobRef} required />
+                <input type="date" ref={dobRef} required style={{marginLeft:'-.12rem'}}/>
               </div>
               <div className="input-box">
                 <span className="details">Age</span>

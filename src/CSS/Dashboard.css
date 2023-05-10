@@ -8,8 +8,8 @@
 
 .leftPart{
     height:100%;
-    width:20%;
-    background-color: aqua;
+    width:15%;
+    background-color: rgb(35, 112, 188);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -17,10 +17,11 @@
     
 }
 
+
 .rightPart{
     height:100%;
     width:80%;
-    background-color: cadetblue;
+    /* background-color: white; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,30 +31,30 @@
  
 /* CSS */
 .dashboardButton {
-  background-image: linear-gradient(#42A1EC, #0070C9);
+  /* background-image: linear-gradient(#42A1EC, #0070C9);
   border: 1px solid #0077CC;
-  border-radius: 4px;
-  width: 8rem;
+  border-radius: 4px; */
+  /* width: 8rem; */
   margin-top: 2rem;
-  box-sizing: border-box;
-  color: #FFFFFF;
+  /* box-sizing: border-box; */
+  color: white;
   cursor: pointer;
-  direction: ltr;
+  /* direction: ltr;
   display: block;
-  font-family: "SF Pro Text","SF Pro Icons","AOS Icons","Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 17px;
+  font-family: "SF Pro Text","SF Pro Icons","AOS Icons","Helvetica Neue",Helvetica,Arial,sans-serif; */
+  /* font-size: 17px;
   font-weight: 400;
   letter-spacing: -.022em;
   line-height: 1.47059;
   min-width: 30px;
   overflow: visible;
   padding: 4px 15px;
-  text-align: center;
-  vertical-align: baseline;
+  text-align: center; */
+  /* vertical-align: baseline;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  white-space: nowrap;
+  white-space: nowrap; */
 }
 
 .dashboardButton:disabled {
@@ -62,14 +63,14 @@
 }
 
 .dashboardButton:hover {
-  background-image: linear-gradient(#51A9EE, #147BCD);
-  border-color: #1482D0;
-  text-decoration: none;
+  /* background-image: linear-gradient(#51A9EE, #147BCD); */
+   color: #1482D0;
+  /* text-decoration: none; */
 }
 
 .dashboardButton:active {
-  background-image: linear-gradient(#3D94D9, #0067B9);
-  border-color: #006DBC;
+  /* background-image: linear-gradient(#3D94D9, #0067B9); */
+  color: #006DBC;
   outline: none;
 }
 
